@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/Products/:id" element={<Products />} />
         <Route path="/Dashboard" element={<Dashboard />}>
           <Route path="Profile" element={<Profile />} />
           <Route path="Settings" element={<Settings />} />
