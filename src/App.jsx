@@ -9,10 +9,10 @@ import Products from "./pages/Products";
 import { createContext, useState } from "react";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
+import { UserProvider } from "./context/UserContext";
 
-export const userContext = createContext();
+// export const userContext = createContext();
 function App() {
-  const [username, setUsername] = useState("guest");
   return (
     // <BrowserRouter>
     //   <Nav />
@@ -28,10 +28,10 @@ function App() {
     //   </Routes>
     // </BrowserRouter>
     <div>
-      <userContext.Provider value={{ username, setUsername }}>
+      <UserProvider>
         <Login />
         <Checkout />
-      </userContext.Provider>
+      </UserProvider>
     </div>
   );
 }
