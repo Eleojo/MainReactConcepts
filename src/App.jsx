@@ -10,6 +10,7 @@ import { createContext, useState } from "react";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import { UserProvider } from "./context/UserContext";
+import Logout from "./components/Logout";
 
 // export const userContext = createContext();
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <UserProvider>
         <Login />
         <Checkout />
+        <Logout />
       </UserProvider>
     </div>
   );

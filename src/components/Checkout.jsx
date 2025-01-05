@@ -3,6 +3,6 @@ import { useContext } from "react";
 import { userContext } from "../context/UserContext";
 
 export default function Checkout() {
-  const { username } = useContext(userContext);
-  return <div>Welcome {username}</div>;
+  const { user } = useContext(userContext);
+  return <div>Welcome {user}</div>;
 }
