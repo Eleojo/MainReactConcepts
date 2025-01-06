@@ -11,9 +11,13 @@ import Checkout from "./components/Checkout";
 import Login from "./components/Login";
 import { UserProvider } from "./context/UserContext";
 import Logout from "./components/Logout";
+import useDisplayMessage from "./hooks/useDisplayMessage";
 
 // export const userContext = createContext();
 function App() {
+  // custom hook
+  const [message, displayMessage] = useDisplayMessage();
+
   return (
     // <BrowserRouter>
     //   <Nav />
@@ -29,11 +33,13 @@ function App() {
     //   </Routes>
     // </BrowserRouter>
     <div>
-      <UserProvider>
+      {/* <UserProvider>
         <Login />
         <Checkout />
         <Logout />
-      </UserProvider>
+      </UserProvider> */}
+      {message}
+      {displayMessage()}
     </div>
   );
 }
