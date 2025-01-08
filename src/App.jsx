@@ -33,11 +33,11 @@ function App() {
     //   </Routes>
     // </BrowserRouter>
     <div>
-      {/* <UserProvider>
+      <UserProvider>
         <Login />
         <Checkout />
         <Logout />
-      </UserProvider> */}
+      </UserProvider>
       {message}
       {displayMessage()}
     </div>

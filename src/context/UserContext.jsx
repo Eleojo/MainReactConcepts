@@ -4,6 +4,7 @@ const userContext = createContext();
 
 function UserProvider({ children }) {
   //   const [username, setUsername] = useState("guest");
+  const [state, dispatch] = useReducer(reducer, { user: null });
   function reducer(user, action) {
     if (action.type == "login") {
       //
@@ -14,7 +15,6 @@ function UserProvider({ children }) {
       return { user: action.payload };
     }
   }
-  const [state, dispatch] = useReducer(reducer, { user: null });
 
   return (
     <userContext.Provider value={{ ...state, dispatch }}>
